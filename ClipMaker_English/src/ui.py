@@ -15,7 +15,7 @@ def render_sidebar():
     with st.sidebar:
         # Logo
         # Logo
-        logo_path = os.path.join(ASSETS_DIR, "images", "Gogi Logo.png")
+        logo_path = os.path.join(ASSETS_DIR, "images", "Gogi Clip Maker.png")
         if os.path.exists(logo_path):
              st.image(logo_path, use_container_width=True)
         else:
