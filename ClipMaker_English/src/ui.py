@@ -4,12 +4,20 @@ from src.constants import TRANSITIONS, DEFAULT_SLIDE_DURATION, DEFAULT_TRANSITIO
 from src.video_processor import process_quick_clip, process_custom_video, generate_preview_transition
 from src.utils import create_slide_image, safe_remove
 
+# Get absolute path to the project root
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+ASSETS_DIR = os.path.join(project_root, "assets")
+
+
 def render_sidebar():
     """Renders the sidebar with Gogi Branding."""
     with st.sidebar:
         # Logo
-        if os.path.exists("assets/images/Gogi Logo.png"):
-             st.image("assets/images/Gogi Logo.png", use_container_width=True)
+        # Logo
+        logo_path = os.path.join(ASSETS_DIR, "images", "Gogi Logo.png")
+        if os.path.exists(logo_path):
+             st.image(logo_path, use_container_width=True)
         else:
             st.title("Gogi Clip Maker")
             
