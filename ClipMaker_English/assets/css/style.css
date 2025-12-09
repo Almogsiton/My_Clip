@@ -1,0 +1,82 @@
+/* Gogi Clip Maker Custom Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #111827;
+    border-right: 1px solid #374151;
+}
+
+/* Header Styling */
+h1 {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    text-shadow: 0 2px 4px rgba(124, 58, 237, 0.3);
+}
+
+h2, h3 {
+    color: #E5E7EB !important;
+    font-weight: 600 !important;
+}
+
+/* Button Styling */
+.stButton > button {
+    background: linear-gradient(90deg, #7C3AED 0%, #6D28D9 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.5);
+}
+
+.stButton > button:hover {
+    box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.6);
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #8B5CF6 0%, #7C3AED 100%);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Secondary Button (Outline) */
+button[kind="secondary"] {
+    background: transparent !important;
+    border: 2px solid #7C3AED !important;
+    color: #7C3AED !important;
+    box-shadow: none !important;
+}
+button[kind="secondary"]:hover {
+    background: rgba(124, 58, 237, 0.1) !important;
+}
+
+/* Card/Container Styling (imitating cards) */
+.css-1r6slb0, .css-12oz5g7 {
+    background-color: #1F2937;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+}
+
+/* Custom Gogi Logo in Sidebar (if we insert via HTML, but useful to have class ready) */
+.gogi-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.gogi-logo {
+    max-width: 80%;
+    height: auto;
+}
+
+hr {
+    border-color: #374151;
+}
